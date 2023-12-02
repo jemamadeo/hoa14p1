@@ -1,7 +1,15 @@
-- name: Installing glance
+- name: Installing Glance in CentOS
   yum:
     name: openstack-glance
-
+  when: ansible_distribution == "CentOS"
+ 
+- name: Installation Glance in Ubuntu
+  apt:
+    name:
+      - glance
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"
 
 
 

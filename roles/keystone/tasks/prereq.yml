@@ -10,4 +10,4 @@
     single_transaction: yes
   failed_when: false
   no_log: true
-
+  when: ansible_distribution == "CentOS"

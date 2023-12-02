@@ -1,6 +1,6 @@
 ---
 
-- hosts: controller_node 
+- hosts: compute 
   become: true
   roles:
     - keystone
